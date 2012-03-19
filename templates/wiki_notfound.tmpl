@@ -1,0 +1,10 @@
+{{define "wiki_notfound.contents"}}
+	<h1>{{.Title |html}}</h1>
+	<div>Sorry, '{{.Title |html}}' does not exist. <a href="/edit/{{.Title |html}}">Create it?</a>.</div>
+{{end}}
+
+{{define "wiki_notfound"}}
+	{{template "base.header"}}
+	{{template "wiki_notfound.contents" .Contents}}
+	{{template "base.footer"}}
+{{end}}
